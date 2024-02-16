@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import loadingIcon from './loading.gif'; // Assuming you have a loading GIF like in Messages.js
 //const path = require('path');
-
-//import './AboutUs.css'; // Assuming you have an AboutUs.css for styling
+import './AboutUs.css'; // Assuming you have an AboutUs.css for styling
 
 const AboutUs = () => {
     const [aboutData, setAboutData] = useState({ title: '', content: [], imageUrl: '' });
@@ -42,7 +41,7 @@ const AboutUs = () => {
             {aboutData.content.map((paragraph, index) => (
                 <p key={index} className="about-paragraph">{paragraph}</p>
             ))}
-            {aboutData.imageUrl && <img src={aboutData.imageUrl} alt="About Us" className="about-image" />}
+            {aboutData.imageUrl && <img src={aboutData.imageUrl} alt="About Us" className="about-image rotate-90" />}
         </div>
     );
 };

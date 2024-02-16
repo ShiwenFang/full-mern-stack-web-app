@@ -88,7 +88,7 @@ app.get('/about-us', (req, res) => {
       "Outside of academics and professional pursuits, I am deeply interested in cultural exchange and diversity. My experiences as an international student have given me a unique perspective on the importance of understanding and appreciating different cultures. I enjoy participating in cultural events and discussions, as they offer opportunities to learn and grow in an increasingly interconnected world.",
       "I love creating In my free time, I like to engage in activities that challenge me both mentally and physically. I am an avid chess player, a hobby that helps me develop strategic thinking and patience. I also enjoy outdoor activities like hiking and cycling, which allow me to connect with nature and maintain a healthy lifestyle. that improves the lives of those around me."
     ],
-    imageUrl: "/images/selfy.jpg"
+    imageUrl: "https://lh3.googleusercontent.com/drive-viewer/AEYmBYSMfTKY7yEGaEW_26NIqN61oGuJgxoyEC2M7gHIPHWBkxo7QeeJ1vXsw6o2aAll78MnDqBHAnL-mkFHoUVI5wWU_bHacA=s1600"
   });
 });
 
