@@ -5,6 +5,8 @@ const cors = require('cors') // middleware for enabling CORS (Cross-Origin Resou
 const mongoose = require('mongoose')
 
 const app = express() // instantiate an Express object
+// selfy setup
+app.use('/images', express.static('images'));
 app.use(morgan('dev', { skip: (req, res) => process.env.NODE_ENV === 'test' })) // log all incoming requests, except when in unit test mode.  morgan has a few logging default styles - dev is a nice concise color-coded style
 app.use(cors()) // allow cross-origin resource sharing
 
@@ -77,6 +79,18 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+
+app.get('/about-us', (req, res) => {
+  res.json({
+    title: "About Us",
+    content: [
+      "Hello! My name is Shiwen Fang, and I am a undergraduate from New York University, where I completed a double major in Mathematics and Computer Science, complemented by a minor in Economics. My academic journey has been an enriching blend of rigorous coursework, collaborative projects, and practical application, shaping me into a detail-oriented and analytical thinker.",
+      "Outside of academics and professional pursuits, I am deeply interested in cultural exchange and diversity. My experiences as an international student have given me a unique perspective on the importance of understanding and appreciating different cultures. I enjoy participating in cultural events and discussions, as they offer opportunities to learn and grow in an increasingly interconnected world.",
+      "I love creating In my free time, I like to engage in activities that challenge me both mentally and physically. I am an avid chess player, a hobby that helps me develop strategic thinking and patience. I also enjoy outdoor activities like hiking and cycling, which allow me to connect with nature and maintain a healthy lifestyle. that improves the lives of those around me."
+    ],
+    imageUrl: "/images/selfy.jpg"
+  });
+});
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
